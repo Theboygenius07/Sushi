@@ -1,19 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 /* other css file imports */
- @import url("sections/header.css");
- @import url("sections/hero.css");
- @import url("sections/about.css");
-@import url("sections/popular.css");
-@import url("sections/trending.css");
-@import url("sections/subscribe.css");
-@import url("sections/footer.css");   
+@import url('sections/header.css');
+@import url('sections/hero.css');
+@import url('sections/about.css');
+@import url('sections/popular.css');
+@import url('sections/trending.css');
+@import url('sections/subscribe.css');
+@import url('sections/footer.css');
 
 /* CSS variables for reusablity across all files (including above imported) */
 :root {
-  --playfair-display: "Playfair Display", serif;
-  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --playfair-display: 'Playfair Display', serif;
+  --plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
 
   --primary-color: #b1454a;
   --secondary-color: #121212;
@@ -27,13 +27,13 @@
   --color-white: #fff;
   --color-creamson: #fff0de;
 }
-html::-webkit-scrollbar{
-    width: 0.5rem;
-    background-color: var(--primary-color);
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--primary-color);
 }
-html::-webkit-scrollbar-thumb{
-    width: 1rem;
-    background-color: var(--color-white);
+html::-webkit-scrollbar-thumb {
+  width: 1rem;
+  background-color: var(--color-white);
 }
 
 * {
@@ -47,14 +47,12 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   background-color: var(--color-creamson);
- 
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
-
 
 .flex-center {
   display: flex;
@@ -117,137 +115,130 @@ a {
 /* START: about us media queries */
 @media screen and (max-width: 1024px) {
 }
- @media screen and (max-width: 991px){
-        .header__nav {
-            background: var(--primary-color);
-          }
-        
-          .header__menu {
-            display: none;
-          }
-        
-          .header__menu-mobile {
-            display: flex;
-          }
-          .header__menu.active {
-              display: flex;
-              flex-direction: column;
-              position: absolute;
-              top: 65px; 
-              right: 0px; 
-              left: 0px; 
-             backdrop-filter: blur(10px);
-              padding: 25px 20px;
-             
-              justify-content: center;
-              align-items: center;
-              z-index: 75;
-              gap: 30px;
-              background: rgba(255, 255, 255, 0.05);
-              border: 1px solid rgba(255, 255, 255, 0.2);
-              border-radius: 56px 20px;
-              padding: 30px 30px;
-              transition: right 01s ease;
-             
-            }
-            .header__menu.active li {
-              font-size: 22px;
-              font-weight: 700;
-              color:#fff0de;
-            }
-            
-    }
-       
-     
-      
-      @media screen and (max-width: 550px) {
-        .header__logo {
-          padding-left: 0;
-        }
-        .header__menu.active {
-            gap: 20px;
-          top: 65px; 
-            right: 0px; 
-            left: 0px; 
-           backdrop-filter: blur(10px);
-            padding: 25px 20px;
-           
-          }
-          .header__menu.active li {
-            font-size: 15px;
-            font-weight: 600;
-            color:#fff0de;
-          }
-        
-      }
-      /* END: header media queries */
-      
-      /* START: hero media queries */
-      @media screen and (max-width: 1060px) {
-        .hero {
-          flex-direction: column;
-        }
-      
-        .hero-img img {
-          width: 100%;
-      
-          transform: matrix(1, 0.05, 0, 1.25, 0, 0) !important;
-        }
-      }
-      
-      @media screen and (max-width: 750px) {
-        .hero-img h2 {
-          font-size: 70px;
-          line-height: 90px;
-        }
-      }
-      
-      @media screen and (max-width: 550px) {
-        .hero-img h2 {
-          font-size: 40px;
-          line-height: 60px;
-        }
-      
-        .hero-content-info {
-          padding: 32px;
-        }
-      
-        .hero-content-info h1 {
-          font-size: 60px;
-        }
-      
-        .hero-content-info p {
-          margin: 32px 0;
-        }
-      
-        .hero-content__buttons {
-          margin: 41px 0;
-        }
-      
-        .hero-content__testimonial {
-          padding: 32px;
-        }
-      }
+@media screen and (max-width: 991px) {
+  .header__nav {
+    background: var(--primary-color);
+  }
 
+  .header__menu {
+    display: none;
+  }
+
+  .header__menu-mobile {
+    display: flex;
+  }
+  .header__menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 0px;
+    left: 0px;
+    backdrop-filter: blur(10px);
+    padding: 25px 20px;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 75;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 56px 20px;
+    padding: 30px 30px;
+    transition: right 01s ease;
+  }
+  .header__menu.active li {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff0de;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header__logo {
+    padding-left: 0;
+  }
+  .header__menu.active {
+    gap: 20px;
+    top: 65px;
+    right: 0px;
+    left: 0px;
+    backdrop-filter: blur(10px);
+    padding: 25px 20px;
+  }
+  .header__menu.active li {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff0de;
+  }
+}
+/* END: header media queries */
+
+/* START: hero media queries */
+@media screen and (max-width: 1060px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-img img {
+    width: 100%;
+
+    transform: matrix(1, 0.05, 0, 1.25, 0, 0) !important;
+  }
+}
 
 @media screen and (max-width: 750px) {
-    .about-us {
-        flex-direction: column;
-      }
-    
-      .about-us__image {
-        flex-direction: row;
-      }
-    
-      .about-us__image-sushi3 {
-        border-bottom: none;
-        border-right: 8px solid var(--color-creamson);
-      }
-    
-      .about-us__button {
-        display: none;
-      }
-    
+  .hero-img h2 {
+    font-size: 70px;
+    line-height: 90px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero-img h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .hero-content-info {
+    padding: 32px;
+  }
+
+  .hero-content-info h1 {
+    font-size: 60px;
+  }
+
+  .hero-content-info p {
+    margin: 32px 0;
+  }
+
+  .hero-content__buttons {
+    margin: 41px 0;
+  }
+
+  .hero-content__testimonial {
+    padding: 32px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about-us {
+    flex-direction: column;
+  }
+
+  .about-us__image {
+    flex-direction: row;
+  }
+
+  .about-us__image-sushi3 {
+    border-bottom: none;
+    border-right: 8px solid var(--color-creamson);
+  }
+
+  .about-us__button {
+    display: none;
+  }
+
   .about-us__image {
     flex-direction: column;
   }
@@ -286,7 +277,6 @@ a {
 }
 /* END: about us media queries */
 
-
 /* START: header media querie */
 @media screen and (max-width: 900px) {
   .header__nav {
@@ -323,7 +313,6 @@ a {
 }
 
 @media screen and (max-width: 750px) {
-    
   .hero-image h2 {
     font-size: 70px;
     line-height: 90px;
@@ -409,15 +398,15 @@ a {
 
 /* START: trending media queries */
 @media screen and (max-width: 1024px) {
-    .trending__content {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-      
-        padding: 32px 64px;
-      }
-      
+  .trending__content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 32px 64px;
+  }
+
   .trending-sushi {
     flex-direction: column;
   }
@@ -427,11 +416,10 @@ a {
   }
 
   .trending__image {
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex: 1;
-   
   }
 
   .trending__discover {
@@ -440,9 +428,8 @@ a {
     top: 44%;
     left: 44%;
     z-index: 1;
-   width: 60px;
-    height: 60px; 
-  
+    width: 60px;
+    height: 60px;
   }
 
   .trending__arrow {
