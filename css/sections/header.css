@@ -4,9 +4,9 @@
 }
 
 .header__logo {
-  flex: 1;
+  flex: 0.805;
   display: flex;
-
+  z-index: -2;
   position: relative;
   padding: 20px;
 }
@@ -17,7 +17,7 @@
   width: 100%;
 
   background-color: var(--primary-color);
-  z-index: -1;
+  z-index: -2;
 }
 
 .header__logo h4 {
